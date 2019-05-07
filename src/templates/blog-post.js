@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Img from 'gatsby-image';
 import { graphql } from 'gatsby'
 
 function BlogPost(props) {
@@ -9,6 +10,7 @@ function BlogPost(props) {
         <Layout>
             <div>
                 <h1>{title}</h1>
+                <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
         </Layout>
@@ -23,6 +25,17 @@ export const query = graphql`
        frontmatter {
         title
         description
+        image {
+          childImageSharp {
+            resize(width: 1500, height: 1500) {
+              src
+            }
+            fluid(maxWidth: 786) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+       }
        }
    }
-}`
+}
+`
