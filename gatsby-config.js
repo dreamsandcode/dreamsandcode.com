@@ -3,7 +3,8 @@ module.exports = {
     title: 'Dreams and Code | Brian Palmer | Full Stack Developer | Toronto',
     description: 'Big dreams, lines of code, sleepless nights. A humble father of two and Full Stack Developer from Toronto, leaving a legacy embraced through his passion of technology.',
     author: '@dreamsandcode',
-    short_title: 'Dreams and Code'
+    short_title: 'Dreams and Code',
+    siteUrl: 'https://www.dreamsandcode.com'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
