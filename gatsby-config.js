@@ -31,6 +31,14 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-offline`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-prismjs`,
+        ]
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
